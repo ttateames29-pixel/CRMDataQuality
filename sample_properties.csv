@@ -1,0 +1,11 @@
+record_id,county,parcel_id,address,city,state,postal_code,owner,building_sqft
+P001, Cedar County ,00042, 100 Example Plaza ,Sampleton,tx,00123,Example Property A,"10,000"
+P002,CEDAR COUNTY,00042,100 EXAMPLE PLAZA,SAMPLETON,TX,00123,EXAMPLE PROPERTY A,10000.0
+P003,Cedar County,00125,200 Example Plaza,Sampleton,TX,00123,Example Property B,"12,500"
+P004,Cedar County,00125,200 Example Plaza,Sampleton,TX,00123,Example Property B Holdings,"13,000"
+P005,Linden County,00042,300 Fictional Avenue,Demoville,TX,00234,Example Property C,7500
+P006,Cedar County,,400 Sample Street,Sampleton,TX,00123,Example Property D,8000
+P007,Cedar County,00777,400 Sample Street,Sampleton,TX,00123,Example Property D,8000
+P008,Cedar County,00990,500 Fictional Avenue,Sampleton,TX,00123,Example Property E,"12,34"
+P009,Cedar County,42,600 Sample Street,Sampleton,TX,00123,Example Property F,4200
+P010,Cedar County,00888,700 Example Plaza,Sampleton,TX,00123,,
