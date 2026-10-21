@@ -1,0 +1,9 @@
+metric,count
+property_records,10
+reference_records,8
+review_items,53
+exact_duplicate_pairs,1
+ambiguous_duplicate_pairs,2
+reference_differences,4
+normalization_proposals,40
+validation_issues,1
