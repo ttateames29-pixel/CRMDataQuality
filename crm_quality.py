@@ -276,7 +276,7 @@ This independent synthetic demonstration was prepared October 21, 2026 with AI a
 <h2>Review queue</h2><p>Every row is a proposed review item. A difference is evidence to investigate, not proof that the reference is correct. No source records were changed or merged.</p>
 <div class="tablebox"><table><thead><tr>""" + headers + "</tr></thead><tbody>" + rows + """</tbody></table></div>
 <footer>Original implementation for a synthetic portfolio demonstration. Runs locally using the Python standard library. No network access, credentials, employer code, or employer records.</footer>
-</main></html>"""
+</main></html>\n"""
 
 
 def spreadsheet_text(value):
@@ -287,12 +287,12 @@ def spreadsheet_text(value):
 def _write_reports(destination, records, references, issues):
     destination = Path(destination)
     with (destination / "review.csv").open("x", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=REVIEW_FIELDS)
+        writer = csv.DictWriter(handle, fieldnames=REVIEW_FIELDS, lineterminator="\n")
         writer.writeheader()
         writer.writerows({key: spreadsheet_text(value) for key, value in issue.items()} for issue in issues)
     stats = summary(records, references, issues)
     with (destination / "summary.csv").open("x", newline="", encoding="utf-8") as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator="\n")
         writer.writerow(("metric", "count"))
         writer.writerows(stats.items())
     (destination / "review.html").write_text(render_html(stats, issues), encoding="utf-8", newline="\n")
